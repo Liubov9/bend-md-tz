@@ -1,0 +1,20 @@
+<div class="card-item">
+    <p class="card-defaultSku">{{item.defaultSku}}</p>
+    <span  class="card-sku">{{item.sku}}</span>
+    
+    <div class="card-line"
+    
+    [ngClass]="{
+        'yellow': !item.joinedWith && item.status === 'open',
+        'red': !item.joinedWith && item.status === 'closed',
+        'orange' : indexZone === 0 && indexCard === 0
+      }">
+    </div>
+
+    <div *ngIf="item.joinedWith !== null" class="card-parent">
+      
+    </div>
+
+</div>
+
+
