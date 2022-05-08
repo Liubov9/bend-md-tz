@@ -1,16 +1,13 @@
 <div class="container">
-
   <ng-container *ngFor="let zone of zones; let i = index">
-    <p class="zone-title">Zona <span>{{i+1}}</span> </p>
-    
-    <div class="zones">
-     
-     <div class="zone-block" *ngFor="let card of zone; let j = index">
-       <app-card [item] = 'card' [indexZone] = 'i' [indexCard] = 'j' ></app-card>
-     </div>     
-     
-   </div>
-  </ng-container>
- 
+    <p class="zone-title">
+      Zona <span>{{ i + 1 }}</span>
+    </p>
 
+    <div class="zones">
+      <div class="zone-block" *ngFor="let card of zone; let j = index">
+        <app-card [item]="card" [indexZone]="i" [indexCard]="j"></app-card>
+      </div>
+    </div>
+  </ng-container>
 </div>
